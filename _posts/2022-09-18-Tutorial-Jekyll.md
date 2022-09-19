@@ -1,15 +1,13 @@
 ---
 layout: post
-title: Tutorial Jekyll
+title: Tutorial Membuat Blog Menggunakan Jekyll
 date: 2022-09-18 12:21
-category: [tutorial, jekyll]
+category: [Tutorial, Jekyll]
 author: Galih Putro Aji
 tags: [how to, build, install, jekyll, blog, github]
 ---
 
-# Tutorial Membuat Blog Menggunakan Jekyll
-
-### Persyaratan
+## Persyaratan
 
 - Memiliki Akun Github.
 - Memiliki Komputer / Laptop
@@ -17,7 +15,7 @@ tags: [how to, build, install, jekyll, blog, github]
 - Memiliki Koneksi Internet
 - Menginstall GIT di Komputer.
 
-## Ringkasan
+## Daftar Isi
 
 1. Apa Itu Jekyll.
 2. Pilih Tema Blog.
