@@ -9,7 +9,7 @@ tags: [how to, tutorial, jekyll, github, github pages, deploy]
 
 Di tutorial sebelumnya, kita sudah membahas tentang cara instalasi dan setup, serta menambahkan post di blog jekyll kita. Selanjutnya di tutorial kali ini kita akan membahas cara agar blog kita bisa di akses dan tulisan kita bisa di baca oleh semua orang.
 
-## Tahapan Awal
+## Proses Deploy
 
 Pertama silahkan kalian pastikan sudah memasang `Github Desktop` di komputer kalian. Jika belum ada, silahkan download melalui [Link Ini](https://desktop.github.com/) dan lakukan instalasi. Jika sudah, silahkan buka Github desktop kalian, dan buka menu `File > Options...`
 
@@ -35,7 +35,9 @@ Sebelum melakukan sinkronisasi dengan online repo di Github.com, kita akan melak
 
 ![Github 2!](/assets/img/deploy-jekyll/github2.png)
 
-Sampai sini silahkan kalian edit file `_config.yml` dan cari baris `url:` dan masukan alamat url github pages kalian, contoh:
+## Edit file \_config.yml
+
+Sampai sini silahkan kalian tinggalkan browser kalian dan kembali ke aplikasi editor, kemudian edit file `_config.yml` dari root folder jekyll kalian dan cari baris `url:` dan masukan alamat url github pages kalian, contoh:
 
 ```yml
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
@@ -53,8 +55,26 @@ Jika sudah, silahkan simpan dengan menekan `Ctrl + S`. Lanjut silahkan kalian bu
 bundle lock --add-platform x86_64-linux
 ```
 
+## Melakukan Push Repo
+
 Selanjutnya kita akan lakukan sinkronisasi atau **_push_** repositori lokal kita dengan repositori online di [Github.com](https://github.com) dengan cara buka aplikasi `Github Desktop` kalian, dibagian kiri bawah pada form `commit`
 
 ![form commit!](/assets/img/deploy-jekyll/commit-form.png)
 
-Pada input judul commit (Paling Atas) silahkan kalian isi bebas, misalnya `Persiapan Deploy` atau apapun, di bagian `Description` boleh di kosongi, atau kalian bisa isi dengan menambahkan detail apa saja yang kalian lakukan di repo tersebut. Selanjutnya klik `Commit to **main**`
+Pada input judul commit (Paling Atas) silahkan kalian isi bebas, misalnya `Persiapan Deploy` atau apapun, di bagian `Description` boleh di kosongi, atau kalian bisa isi dengan menambahkan detail apa saja yang kalian lakukan di repo tersebut. Selanjutnya klik `Commit to **main**` kalau sudah, silahkan kalian perhatikan tampilan di sebelah kanan aplikasi Github Desktop kalian, akan muncul tampilan berikut:
+
+![Push Repo!](/assets/img/deploy-jekyll/push-repo.png)
+
+Silahkan kalian klik `Push origin`. Sampai sini kalian sudah berhasil melakukan `push` repo dari lokal ke online.
+
+Selanjutnya silahkan buka halaman online repo kalian di https://github.com/nama-repo-kalian lalu kita kembali pergi ke `Settings > Pages` di bagian `Branch` silahkan kalian klik dan akan muncul branch baru bernama `gh-pages` silahkan kalian pilih `gh-pages` dan klik `Save`. Tunggu beberapa saat dan seharusnya kalian sudah bisa melihat alamat url github pages kalian di bagian atas Branch tadi, seperti `username.github.io`. Selanjutnya kalian klik tombol `Visit Site` untuk melihat Blog Kalian. Jika tampilan blog kalian masih kosong silahkan tunggu saja sampai proses workflow action repo kalian berhasil di eksekusi, atau kalian bisa kembali ke halaman repo kalian dan pergi ke bagian tab `Actions`.
+
+## Penutup
+
+Sampai sini seharusnya kalian sudah memiliki sebuah blog tanpa harus membayar biaya sewa hosting dll.
+
+> ### **Penting !**
+>
+> _Kalian harus selalu melakukan **Push Repo** Setiap kalian selesai menambahkan post atau melakukan perubahan apapun di lokal repo kalian. Jika tidak, maka semua perubahan yang kalian lakukan akan sia-sia dan dan online blog kalian tidak akan ter-update. Intinya Blog yang kalian install di github pages hanya akan ter-update ketika kalian melakukan push repo. Selama proses eksekusi `workflow` di tab `Actions` berjalan lancar tanpa terjadi error, maka Online Blog kalian akan selalu ter-update_
+
+Demikian tutorial untuk deploy Jekyll di Github Pages. Mohon maaf jika terlalu panjang dan ada kesalahan dalam penyampaian saya. Saya usahakan untuk menjelaskan lebih detail supaya mudah dipahami. Jangan lupa tinggalkan komentar jika kalian mengalami kesulitan dalam proses deploying. Terimakasih..
