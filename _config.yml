@@ -23,10 +23,10 @@ timezone: Asia/Jakarta
 
 title: GVerse # the main title
 
-tagline: Galih Personal Blog # it will display as the sub-title
+tagline: Galih Verse - Personal Blog # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Galih Putro Aji Personal Site.
+  Galih Putro Aji Personal Site - GVerse - Galih Verse .
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://galihputroaji.github.io"
